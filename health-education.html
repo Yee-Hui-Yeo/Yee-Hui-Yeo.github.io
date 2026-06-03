@@ -156,21 +156,15 @@
   }
   .dc-detail.open { display: block; }
   @keyframes fadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
-  /* no-photo card variant */
-  .dc-no-img { border-top: 3px solid var(--accent); }
-  .dc-no-img .dc-header-bar {
-    display: flex; align-items: center; gap: 8px;
-    padding: 12px 16px 0;
-  }
-  .dc-no-img .dc-topic-inline {
-    background: #002147; color: #c9a84c;
-    font-size: 10px; font-weight: 600; letter-spacing: .06em;
-    padding: 3px 9px; border-radius: 99px; flex-shrink: 0;
-  }
   /* empty photo placeholder */
   .dc-img-placeholder {
-    height: 10px; background: transparent;
+    height: 160px; background: #f0f4f8;
+    border-radius: 14px 14px 0 0;
+    display: flex; align-items: center; justify-content: center;
+    position: relative; flex-shrink: 0;
   }
+  .dc-img-placeholder.wide { height: 180px; }
+
   /* responsive */
   .coming-soon-box {
     background: var(--white);
@@ -1005,12 +999,12 @@
     </div><!-- end prevention grid -->
   </div>
 
-  <!-- CIRRHOSIS PAGE -->
+  <!-- CIRRHOSIS SECTION -->
   <div id="topic-cirrhosis" style="display:block;">
     <div class="section-label">Cirrhosis</div>
     <div class="discover-grid">
 
-      <!-- CIRRHOSIS CARD: What is cirrhosis — tall -->
+      <!-- Card 1 -->
       <div class="dc-card dc-tall" data-topic="cirrhosis">
         <div class="dc-img-wrap">
           <img src="https://images.unsplash.com/photo-1590086782974-e6e7b85e738e?w=600&auto=format&fit=crop&q=80" alt="Man in gray button up shirt" class="dc-img">
@@ -1022,11 +1016,11 @@
           <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
           <div class="dc-detail" style="display:none;">
             <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Cirrhosis develops gradually</strong> over years or decades as chronic liver injury triggers repeated cycles of inflammation and healing that eventually replace normal tissue with scar.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Cirrhosis develops gradually</strong> over years or decades as chronic liver injury triggers repeated cycles of inflammation and healing that replace normal tissue with scar.</li>
               <li style="font-size:12px;color:#374151;line-height:1.65;">The most common causes worldwide are <strong>alcohol-related liver disease, MASLD (fatty liver), and chronic hepatitis B or C</strong>.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Compensated cirrhosis</strong> means the liver is scarred but still functioning — many patients have no symptoms and live for many years. <strong>Decompensated cirrhosis</strong> occurs when the liver can no longer maintain its essential functions.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;">Fibrosis is graded on the <strong>METAVIR scale (F0–F4)</strong> — F4 is cirrhosis. Modern non-invasive tests (FibroScan, MRI elastography, FIB-4 score) can often detect it without a liver biopsy.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;">Although scar tissue cannot fully reverse, <strong>treating the underlying cause</strong> (e.g., stopping alcohol, achieving viral cure, losing weight) can halt further damage and, in some cases, allow partial reversal of early cirrhosis.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Compensated cirrhosis</strong> means the liver is scarred but still functioning. <strong>Decompensated cirrhosis</strong> occurs when the liver can no longer maintain its essential functions.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Fibrosis is graded on the <strong>METAVIR scale (F0–F4)</strong> — F4 is cirrhosis. Non-invasive tests (FibroScan, MRI elastography, FIB-4) can often detect it without a liver biopsy.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Treating the underlying cause can halt further damage and, in some cases, allow partial reversal of early cirrhosis.</li>
             </ul>
             <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
               <span title="EASL CPG on Decompensated Cirrhosis 2021 · Ginès P et al., Nature Reviews 2021 · AASLD Practice Guidance on Cirrhosis 2023" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
@@ -1036,7 +1030,7 @@
         </div>
       </div>
 
-      <!-- CIRRHOSIS CARD: Complications — wide -->
+      <!-- Card 2 -->
       <div class="dc-card dc-wide" data-topic="cirrhosis">
         <div class="dc-img-wrap">
           <img src="https://images.unsplash.com/photo-1556750539-dc6305f4f248?w=800&auto=format&fit=crop&q=80" alt="Person lying on bed covering face with pillow" class="dc-img">
@@ -1048,11 +1042,11 @@
           <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
           <div class="dc-detail" style="display:none;">
             <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Ascites</strong> (fluid in the abdomen) is the most common complication of decompensated cirrhosis, caused by high pressure in the portal vein and low albumin. Managed with a low-sodium diet, diuretics, and sometimes fluid drainage (paracentesis).</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Oesophageal and gastric varices</strong> are enlarged blood vessels that can rupture and bleed life-threateningly. All patients with cirrhosis should be screened with endoscopy, and beta-blockers or banding are used to prevent bleeding.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatic encephalopathy (HE)</strong> occurs when the liver cannot clear toxins like ammonia, causing confusion, disorientation, and in severe cases, coma. Treated with lactulose and rifaximin.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Spontaneous bacterial peritonitis (SBP)</strong> is a bacterial infection of ascitic fluid — a dangerous emergency requiring immediate antibiotic treatment and long-term antibiotic prophylaxis after the first episode.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatocellular carcinoma (HCC)</strong> risk is significantly elevated in cirrhosis — 6-monthly liver ultrasound surveillance is recommended for all patients regardless of cause.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Ascites</strong> is the most common complication of decompensated cirrhosis. Managed with low-sodium diet, diuretics, and sometimes fluid drainage (paracentesis).</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Oesophageal and gastric varices</strong> can rupture and bleed life-threateningly. All patients should be screened with endoscopy; beta-blockers or banding prevent bleeding.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatic encephalopathy (HE)</strong> occurs when the liver cannot clear toxins like ammonia. Treated with lactulose and rifaximin.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Spontaneous bacterial peritonitis (SBP)</strong> is a dangerous infection of ascitic fluid requiring immediate antibiotics.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatocellular carcinoma (HCC)</strong> risk is significantly elevated — 6-monthly liver ultrasound surveillance is recommended for all patients.</li>
             </ul>
             <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
               <span title="EASL CPG on Decompensated Cirrhosis 2021 · AASLD Cirrhosis Practice Guidance 2023 · Ginès P et al., Nature Reviews Disease Primers 2021" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
@@ -1062,7 +1056,7 @@
         </div>
       </div>
 
-      <!-- CIRRHOSIS CARD: Living with cirrhosis — std -->
+      <!-- Card 3 -->
       <div class="dc-card dc-std" data-topic="cirrhosis">
         <div class="dc-img-wrap">
           <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&auto=format&fit=crop&q=80" alt="Man running on road during daytime" class="dc-img">
@@ -1070,15 +1064,30 @@
         </div>
         <div class="dc-body">
           <h3 class="dc-question">How can I slow progression and live well with cirrhosis?</h3>
-          <p class="dc-answer">While cirrhosis cannot always be reversed, treating the underlying cause, avoiding alcohol completely, maintaining a healthy diet, staying active, and attending regular follow-up appointments can greatly slow progression and improve quality of life.</p>
+          <p class="dc-answer">While cirrhosis cannot always be reversed, treating the underlying cause, avoiding alcohol completely, maintaining a healthy diet, staying active, and attending regular follow-up appointments can greatly slow progression.</p>
           <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
           <div class="dc-detail" style="display:none;">
             <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Absolute alcohol abstinence</strong> is essential in cirrhosis of any cause — even small amounts can trigger decompensation. Seek specialist support if this is difficult.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;">A <strong>low-sodium diet (≤2 g/day)</strong> helps control fluid retention. Ensure adequate protein intake (1.2–1.5 g/kg/day) to prevent muscle wasting (sarcopenia), which worsens outcomes.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular gentle exercise</strong> (walking, swimming, yoga) improves muscle mass, reduces fatigue, and is associated with better survival in cirrhosis — prolonged rest is no longer recommended.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;">Avoid <strong>NSAIDs (ibuprofen, naproxen)</strong>, which can worsen kidney function. Use paracetamol cautiously (max 2 g/day) and always disclose liver disease to your pharmacist before any new medication.</li>
-              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular monitoring</strong> — 6-monthly liver ultrasound, endoscopy for varices, and blood tests — is essential. Ask your hepatologist about transplant assessment if you develop decompensation.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Absolute alcohol abstinence</strong> is essential — even small amounts can trigger decompensation.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">A <strong>low-sodium diet (≤2 g/day)</strong> helps control fluid retention. Ensure adequate protein intake (1.2–1.5 g/kg/day) to prevent muscle wasting.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular gentle exercise</strong> improves muscle mass, reduces fatigue, and is associated with better survival.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Avoid <strong>NSAIDs (ibuprofen, naproxen)</strong>. Use paracetamol cautiously (max 2 g/day) and always disclose liver disease to your pharmacist.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular monitoring</strong> — 6-monthly liver ultrasound, endoscopy for varices, and blood tests — is essential.</li>
             </ul>
             <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
-              <span title="EASL CPG Decompensated Cirrhosis 2021 · Berzigotti A et al., J Hepatol 2021 · AASLD Cirrhosis Guidance 2023 · Montano-Loza AJ, Hepatology 2022" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:2
+              <span title="EASL CPG Decompensated Cirrhosis 2021 · Berzigotti A et al., J Hepatol 2021 · AASLD Cirrhosis Guidance 2023" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
+              <span style="font-size:11px;color:#9ca3af;">Hover the icon to see sources</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="dc-card dc-wide" data-topic="cirrhosis">
+        <div class="dc-img-wrap" style="height:180px;background:#f0f4f8;display:flex;align-items:center;justify-content:center;border-radius:14px 14px 0 0;position:relative;overflow:hidden;">
+          <span class="dc-topic">Decompensation</span>
+        </div>
+        <div class="dc-body">
+          <h3 class="dc-question">What is decompensated cirrhosis?</h3>
+          <p class="dc-answer">Decompensated cirrhosis is when the scarred liver can no longer carry out its essential functions, leading to serious complications such as fluid in the abdomen, bleeding, confusion, or jaundice. It marks a turning point that significantly affects prognosis.</p>
+          <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;curs
