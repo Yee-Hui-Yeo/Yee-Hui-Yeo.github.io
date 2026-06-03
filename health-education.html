@@ -226,6 +226,7 @@
     <a href="#" class="hed-tab" onclick="showTopic(this,'liver-cancer')">Liver Cancer</a>
     <a href="#" class="hed-tab" onclick="showTopic(this,'hepatitis')">Hepatitis</a>
     <a href="#" class="hed-tab" onclick="showTopic(this,'prevention')">Prevention</a>
+    <a href="#" class="hed-tab" onclick="showTopic(this,'cirrhosis')">Cirrhosis</a>
     <a href="index.html" class="hed-tab" style="color:rgba(232,237,243,.4);border-bottom:none;">← Yeo Lab</a>
   </div>
   <button class="nav-toggle" onclick="document.getElementById('hed-nav-links').classList.toggle('open')" aria-label="Menu">
@@ -245,7 +246,7 @@
 
 <!-- MAIN -->
 <div class="main">
-  <div class="section-label" id="topic-label">Fatty Liver — All questions</div>
+  <div class="section-label" id="topic-label">All questions</div>
   <div id="section-fatty-liver" style="display:block;"><div class="discover-grid" id="discover-grid">
 
         <!-- ═══ QUESTION CARDS GO HERE ═══ -->
@@ -493,7 +494,7 @@
 </div>
 
   <!-- LIVER CANCER PAGE -->
-  <div id="topic-liver-cancer" style="display:none;">
+  <div id="topic-liver-cancer" style="display:block;">
     <div class="section-label">Liver Cancer</div>
     <div class="discover-grid">
 
@@ -631,7 +632,7 @@
   </div>
 
   <!-- HEPATITIS PAGE -->
-  <div id="topic-hepatitis" style="display:none;">
+  <div id="topic-hepatitis" style="display:block;">
     <div class="section-label">Hepatitis</div>
     <div class="discover-grid">
 
@@ -852,7 +853,7 @@
   </div>
 
   <!-- PREVENTION PAGE -->
-  <div id="topic-prevention" style="display:none;">
+  <div id="topic-prevention" style="display:block;">
     <div class="section-label">Prevention</div>
     <div class="discover-grid">
 
@@ -989,6 +990,92 @@
     </div><!-- end prevention grid -->
   </div>
 
+  <!-- CIRRHOSIS PAGE -->
+  <div id="topic-cirrhosis" style="display:block;">
+    <div class="section-label">Cirrhosis</div>
+    <div class="discover-grid">
+
+      <!-- CIRRHOSIS CARD 1: What is cirrhosis — tall -->
+      <div class="dc-card dc-tall" data-topic="cirrhosis">
+        <div class="dc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&auto=format&fit=crop&q=80" alt="Medical professional reviewing liver scan results" class="dc-img">
+          <span class="dc-topic">Cirrhosis</span>
+        </div>
+        <div class="dc-body">
+          <h3 class="dc-question">What is cirrhosis and how does it develop?</h3>
+          <p class="dc-answer">Cirrhosis is advanced liver scarring where healthy liver tissue is replaced by fibrous scar tissue. It is the end result of long-term liver damage and can develop from many causes including fatty liver, alcohol, and hepatitis.</p>
+          <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
+          <div class="dc-detail" style="display:none;">
+            <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Cirrhosis develops gradually</strong> over years or decades as chronic liver injury triggers repeated cycles of inflammation and healing that eventually replace normal tissue with scar.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">The most common causes worldwide are <strong>alcohol-related liver disease, MASLD (fatty liver), and chronic hepatitis B or C</strong>.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Compensated cirrhosis</strong> means the liver is scarred but still functioning — many patients have no symptoms and live for many years. <strong>Decompensated cirrhosis</strong> occurs when the liver can no longer maintain its essential functions.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Fibrosis is graded on the <strong>METAVIR scale (F0–F4)</strong> — F4 is cirrhosis. Modern non-invasive tests (FibroScan, MRI elastography, FIB-4 score) can often detect it without a liver biopsy.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Although scar tissue cannot fully reverse, <strong>treating the underlying cause</strong> (e.g., stopping alcohol, achieving viral cure, losing weight) can halt further damage and, in some cases, allow partial reversal of early cirrhosis.</li>
+            </ul>
+            <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
+              <span title="EASL CPG on Decompensated Cirrhosis 2021 · Ginès P et al., Nature Reviews 2021 · AASLD Practice Guidance on Cirrhosis 2023" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
+              <span style="font-size:11px;color:#9ca3af;">Hover the icon to see sources</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CIRRHOSIS CARD 2: Symptoms & complications — wide -->
+      <div class="dc-card dc-wide" data-topic="cirrhosis">
+        <div class="dc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&auto=format&fit=crop&q=80" alt="Medical team discussing patient care" class="dc-img">
+          <span class="dc-topic">Complications</span>
+        </div>
+        <div class="dc-body">
+          <h3 class="dc-question">What complications can cirrhosis cause?</h3>
+          <p class="dc-answer">Cirrhosis can cause serious complications including fluid accumulation in the abdomen (ascites), internal bleeding from enlarged veins (varices), confusion from toxin build-up (hepatic encephalopathy), and liver cancer.</p>
+          <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
+          <div class="dc-detail" style="display:none;">
+            <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Ascites</strong> (fluid in the abdomen) is the most common complication of decompensated cirrhosis, caused by high pressure in the portal vein and low albumin. Managed with a low-sodium diet, diuretics, and sometimes fluid drainage (paracentesis).</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Oesophageal and gastric varices</strong> are enlarged blood vessels that can rupture and bleed life-threateningly. All patients with cirrhosis should be screened with endoscopy, and beta-blockers or banding are used to prevent bleeding.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatic encephalopathy (HE)</strong> occurs when the liver cannot clear toxins like ammonia, causing confusion, disorientation, and in severe cases, coma. Treated with lactulose and rifaximin.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Spontaneous bacterial peritonitis (SBP)</strong> is a bacterial infection of ascitic fluid — a dangerous emergency requiring immediate antibiotic treatment and long-term antibiotic prophylaxis after the first episode.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Hepatocellular carcinoma (HCC)</strong> risk is significantly elevated in cirrhosis — 6-monthly liver ultrasound surveillance is recommended for all patients regardless of cause.</li>
+            </ul>
+            <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
+              <span title="EASL CPG on Decompensated Cirrhosis 2021 · AASLD Cirrhosis Practice Guidance 2023 · Ginès P et al., Nature Reviews Disease Primers 2021" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
+              <span style="font-size:11px;color:#9ca3af;">Hover the icon to see sources</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CIRRHOSIS CARD 3: Living with cirrhosis — std -->
+      <div class="dc-card dc-std" data-topic="cirrhosis">
+        <div class="dc-img-wrap">
+          <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&auto=format&fit=crop&q=80" alt="Person walking outdoors for gentle exercise" class="dc-img">
+          <span class="dc-topic">Living Well</span>
+        </div>
+        <div class="dc-body">
+          <h3 class="dc-question">How can I slow progression and live well with cirrhosis?</h3>
+          <p class="dc-answer">While cirrhosis cannot always be reversed, treating the underlying cause, avoiding alcohol completely, maintaining a healthy diet, staying active, and attending regular follow-up appointments can greatly slow progression and improve quality of life.</p>
+          <button class="dc-more-btn" onclick="toggleDetail(this)" style="display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;font-weight:600;color:#fff;background:#002147;padding:6px 14px;border-radius:6px;border:none;cursor:pointer;flex-shrink:0;">Read more &#9662;</button>
+          <div class="dc-detail" style="display:none;">
+            <ul style="padding-left:18px;margin:0;display:flex;flex-direction:column;gap:7px;">
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Absolute alcohol abstinence</strong> is essential in cirrhosis of any cause — even small amounts can trigger decompensation. Seek specialist support if this is difficult.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">A <strong>low-sodium diet (≤2 g/day)</strong> helps control fluid retention. Ensure adequate protein intake (1.2–1.5 g/kg/day) to prevent muscle wasting (sarcopenia), which worsens outcomes.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular gentle exercise</strong> (walking, swimming, yoga) improves muscle mass, reduces fatigue, and is associated with better survival in cirrhosis — prolonged rest is no longer recommended.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;">Avoid <strong>NSAIDs (ibuprofen, naproxen)</strong>, which can worsen kidney function. Use paracetamol cautiously (max 2 g/day) and always disclose liver disease to your pharmacist before any new medication.</li>
+              <li style="font-size:12px;color:#374151;line-height:1.65;"><strong>Regular monitoring</strong> — 6-monthly liver ultrasound, endoscopy for varices, and blood tests — is essential. Ask your hepatologist about transplant assessment if you develop decompensation.</li>
+            </ul>
+            <div style="margin-top:10px;display:flex;align-items:center;gap:6px;">
+              <span title="EASL CPG Decompensated Cirrhosis 2021 · Berzigotti A et al., J Hepatol 2021 · AASLD Cirrhosis Guidance 2023 · Montano-Loza AJ, Hepatology 2022" style="cursor:help;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:#002147;color:#c9a84c;font-size:11px;font-weight:700;flex-shrink:0;">i</span>
+              <span style="font-size:11px;color:#9ca3af;">Hover the icon to see sources</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end cirrhosis grid -->
+  </div>
+
 </div>
 
 <!-- FOOTER -->
@@ -1019,26 +1106,35 @@ function showTopic(btn, topic) {
   });
   btn.classList.add('active');
 
-  // All sections — use the wrapper div for fatty liver, not the grid itself
   var fattySection = document.getElementById('section-fatty-liver');
   var cancer       = document.getElementById('topic-liver-cancer');
   var hepatitis    = document.getElementById('topic-hepatitis');
   var prevention   = document.getElementById('topic-prevention');
+  var cirrhosis    = document.getElementById('topic-cirrhosis');
   var label        = document.getElementById('topic-label');
 
   // Hide ALL sections first
-  [fattySection, cancer, hepatitis, prevention].forEach(function(s) {
+  [fattySection, cancer, hepatitis, prevention, cirrhosis].forEach(function(s) {
     if (s) s.style.display = 'none';
   });
 
-  // Show only the selected section
-  if (topic === 'all' || topic === 'fatty-liver') {
-    if (fattySection) fattySection.style.display = 'block';
-    if (label) label.textContent = topic === 'all' ? 'All questions' : 'Fatty Liver';
-    // Filter cards if fatty-liver only
-    document.querySelectorAll('#discover-grid .dc-card').forEach(function(c) {
-      c.style.display = (topic === 'all' || c.dataset.topic === 'fatty-liver') ? 'flex' : 'none';
+  if (topic === 'all') {
+    // Show every section
+    [fattySection, cancer, hepatitis, prevention, cirrhosis].forEach(function(s) {
+      if (s) s.style.display = 'block';
     });
+    // Make sure all fatty-liver cards are visible
+    document.querySelectorAll('#discover-grid .dc-card').forEach(function(c) {
+      c.style.display = 'flex';
+    });
+    if (label) label.textContent = 'All questions';
+
+  } else if (topic === 'fatty-liver') {
+    if (fattySection) fattySection.style.display = 'block';
+    document.querySelectorAll('#discover-grid .dc-card').forEach(function(c) {
+      c.style.display = 'flex';
+    });
+    if (label) label.textContent = 'Fatty Liver';
 
   } else if (topic === 'liver-cancer') {
     if (cancer) cancer.style.display = 'block';
@@ -1051,6 +1147,10 @@ function showTopic(btn, topic) {
   } else if (topic === 'prevention') {
     if (prevention) prevention.style.display = 'block';
     if (label)      label.textContent = 'Prevention';
+
+  } else if (topic === 'cirrhosis') {
+    if (cirrhosis) cirrhosis.style.display = 'block';
+    if (label)     label.textContent = 'Cirrhosis';
   }
 
   // Close mobile menu and scroll to top
