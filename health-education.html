@@ -998,7 +998,7 @@
       <!-- CIRRHOSIS CARD 1: What is cirrhosis — tall -->
       <div class="dc-card dc-tall" data-topic="cirrhosis">
         <div class="dc-img-wrap">
-          <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&auto=format&fit=crop&q=80" alt="Medical professional reviewing liver scan results" class="dc-img">
+          <img src="https://images.unsplash.com/photo-1590086782974-e6e7b85e738e?w=600&auto=format&fit=crop&q=80" alt="Man in gray button up shirt" class="dc-img">
           <span class="dc-topic">Cirrhosis</span>
         </div>
         <div class="dc-body">
@@ -1024,7 +1024,7 @@
       <!-- CIRRHOSIS CARD 2: Symptoms & complications — wide -->
       <div class="dc-card dc-wide" data-topic="cirrhosis">
         <div class="dc-img-wrap">
-          <img src="https://images.unsplash.com/photo-1631815588090-d4bfec5b1ccb?w=800&auto=format&fit=crop&q=80" alt="Medical team discussing patient care" class="dc-img">
+          <img src="https://images.unsplash.com/photo-1556750539-dc6305f4f248?w=800&auto=format&fit=crop&q=80" alt="Person lying on bed covering face with pillow" class="dc-img">
           <span class="dc-topic">Complications</span>
         </div>
         <div class="dc-body">
@@ -1050,7 +1050,7 @@
       <!-- CIRRHOSIS CARD 3: Living with cirrhosis — std -->
       <div class="dc-card dc-std" data-topic="cirrhosis">
         <div class="dc-img-wrap">
-          <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&auto=format&fit=crop&q=80" alt="Person walking outdoors for gentle exercise" class="dc-img">
+          <img src="https://images.unsplash.com/photo-1571008887538-b36bb32f4571?w=600&auto=format&fit=crop&q=80" alt="Man running on road during daytime" class="dc-img">
           <span class="dc-topic">Living Well</span>
         </div>
         <div class="dc-body">
@@ -1085,86 +1085,4 @@
       <div class="nav-logo-mark">YL</div>
       <div>
         <div class="footer-name">Yeo Lab</div>
-        <div class="footer-sub">Patient Education</div>
-      </div>
-    </a>
-    <div class="footer-right">
-      <p>For clinical inquiries: <a href="mailto:yeehui.yeo@cshs.org">yeehui.yeo@cshs.org</a></p>
-      <p><a href="index.html">← Back to Yeo Lab website</a></p>
-    </div>
-  </div>
-  <div class="disclaimer">
-    ⚠️ This content is for educational purposes only and does not replace professional medical advice. Always consult your doctor or a qualified healthcare provider for diagnosis and treatment decisions.
-  </div>
-</footer>
-
-<script>
-function showTopic(btn, topic) {
-  // Update active nav tab
-  document.querySelectorAll('.hed-tab').forEach(function(t) {
-    t.classList.remove('active');
-  });
-  btn.classList.add('active');
-
-  var fattySection = document.getElementById('section-fatty-liver');
-  var cancer       = document.getElementById('topic-liver-cancer');
-  var hepatitis    = document.getElementById('topic-hepatitis');
-  var prevention   = document.getElementById('topic-prevention');
-  var cirrhosis    = document.getElementById('topic-cirrhosis');
-  var label        = document.getElementById('topic-label');
-
-  // Hide ALL sections first
-  [fattySection, cancer, hepatitis, prevention, cirrhosis].forEach(function(s) {
-    if (s) s.style.display = 'none';
-  });
-
-  if (topic === 'all') {
-    // Show every section
-    [fattySection, cancer, hepatitis, prevention, cirrhosis].forEach(function(s) {
-      if (s) s.style.display = 'block';
-    });
-    // Make sure all fatty-liver cards are visible
-    document.querySelectorAll('#discover-grid .dc-card').forEach(function(c) {
-      c.style.display = 'flex';
-    });
-    if (label) label.textContent = 'All questions';
-
-  } else if (topic === 'fatty-liver') {
-    if (fattySection) fattySection.style.display = 'block';
-    document.querySelectorAll('#discover-grid .dc-card').forEach(function(c) {
-      c.style.display = 'flex';
-    });
-    if (label) label.textContent = 'Fatty Liver';
-
-  } else if (topic === 'liver-cancer') {
-    if (cancer) cancer.style.display = 'block';
-    if (label)  label.textContent = 'Liver Cancer';
-
-  } else if (topic === 'hepatitis') {
-    if (hepatitis) hepatitis.style.display = 'block';
-    if (label)     label.textContent = 'Hepatitis';
-
-  } else if (topic === 'prevention') {
-    if (prevention) prevention.style.display = 'block';
-    if (label)      label.textContent = 'Prevention';
-
-  } else if (topic === 'cirrhosis') {
-    if (cirrhosis) cirrhosis.style.display = 'block';
-    if (label)     label.textContent = 'Cirrhosis';
-  }
-
-  // Close mobile menu and scroll to top
-  var navLinks = document.getElementById('hed-nav-links');
-  if (navLinks) navLinks.classList.remove('open');
-  window.scrollTo(0, 0);
-}
-
-function toggleDetail(btn) {
-  var detail = btn.nextElementSibling;
-  var isOpen = detail.style.display === 'block';
-  detail.style.display = isOpen ? 'none' : 'block';
-  btn.innerHTML = isOpen ? 'Read more &#9662;' : 'Read less &#9652;';
-}
-</script>
-</body>
-</html>
+        <div clas
